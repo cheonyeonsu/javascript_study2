@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열의 기본형
+        const numbers = [273, 52, 103, 32]; 
+        //인덱스 번호 0,1,2
+        console.log(numbers[2]); 
+        console.log(numbers[1]); 
+        
+        const fruits = ['배', '사과', '키위', '바나나'];
+        console.log(fruits[2]);
+
+        console.log(fruits.length); //배열의 길이이므로, 데이터 4개이니까 4가 출력됨. 
+
+        fruits[0] = '포도' //배열의 특정 데이터 바꿀 때.
+        console.log(fruits[0]); 
+
+        //배열의 맨 뒤에 값을 추가하는 것
+        fruits.push('딸기');
+        console.log("배열목록: " + fruits);
+
+       //배열의 요소 제거
+       fruits.splice(2,1); // '2번 인덱스 번호부터 1개 요소를 제거하겠다'
+       console.log("배열목록: " + fruits);
+                                                                                                    
+       //해당 인덱스 부터 요소 추가 '2번 인덱스 자리에 메론이 추가됨.'
+       fruits.splice(2, 0, '메론');
+       console.log("배열목록: " + fruits);
+
+        //index of *굉장히 많이 쓰임*
+       console.log(fruits, indexOf('바나나'));
+       //console.log("인덱스 번호: " + fruits.indexOf('바나나'))
+        let idx = fruits.indexOf('바나나')
+        fruits.splice(idx, 1); //3번째 인덱스 목록부터 1개의 요소를 삭제하겠다. 
+       console.log("배열목록: " + fruits);
+         
+
+    </script>
+</body>
+</html>

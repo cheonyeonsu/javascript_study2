@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //매개변수 : 함수를 실행할 때 값을 받는 변수
+        function f(x, y) { //여러개 계속 추가 가능. 
+            console.log(`x는 ${x}`);
+            console.log(`y는 ${y}`);
+
+            return  x * y; //리턴값 : 함수를 실행할 때 되돌려주는 값. 간단한 사칙연산, 문자열 넣기 가능. 
+        }
+
+        let num = f(5, 3);
+        console.log(`리턴값은 ${num}`);
+    </script>
+</body>
+</html>

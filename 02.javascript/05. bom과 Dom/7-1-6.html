@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=M, initial-scale=1.0">
+    <title>7-1-6.html</title>
+</head>
+<body>
+    <img class="rect" alt="고양이1"> <!--배열에 들어있는 내용-->
+    <img class="rect" alt="고양이2">
+    <img class="rect" alt="고양이3">
+    <img class="rect" alt="고양이4">
+    <script>
+        const rects = document.querySelectorAll('.rect');
+        console.log(rects);
+
+        for(let i=0; i<rects.length; i++) {
+            const width = (i+1) * 100; // 100, 200, 300, 400
+            const src = `https://placekitten.com/${width}/250`;
+            console.log(src); 
+            console.log(rects[i]); //테그 4개 출력. 인덱스 번호 돌려서 고양이 4개 가져옴. 
+
+            rects[i].setAttribute('src', src); // 테그에 src속성 부여 
+
+            consol.log("getAttribute: " + rects[i].getAttribute('alt'));
+            consol.log("-------------------------------------------") //for문 하나 끝날 때마다 구분선
+
+
+        }
+
+
+    </script>
+</body>
+</html>

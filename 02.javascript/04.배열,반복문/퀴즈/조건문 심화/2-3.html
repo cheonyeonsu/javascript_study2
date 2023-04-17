@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <!--사용자로부터 3개의 정수를 입력받아, 그 수들의 최댓값과 최소값, 
+    합계와 평균을 구해서 브라우저, 혹은 콘솔에 출력. -->
+    
+    <script>
+    var num1 = prompt("정수입력" ,0);
+    var num2 = prompt("정수입력" ,0);
+    var num3 = prompt("정수입력" ,0);
+    //var sum = Number(num1 + num2 + num3); 주의
+    var sum = Number(num1) + Number(num2) + Number(num3);
+    var avg = sum / 3;
+    
+    var max = num1;
+    var min = num1;
+    
+    // 최대값 
+    if (max < num2) max = num2;
+    if (max < num3) max = num3;
+    
+    // 최소값 
+    if (min > num2) min = num2;
+    if (min > num3) min = num3;
+        
+    var msg = "최대값: " + max + ", 최소값: " + min +", 합계: " + sum + ", 평균: " + avg;
+
+    document.write(msg);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "10";
+        var result; // 중요.  undefined(정의되지 않은) 상태.
+        var result2 = null; // 중요.  null=빈값
+
+        console.log(boolean(result)); 
+        console.log(boolean(result2)); //강제 형변환. 
+        console.log(boolean(0)); //강제 형변환. 
+
+
+        result = a !== f;
+        document.write(result,'<br>');
+
+        result = a != f;
+        document.write(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <textarea></textarea> <!--긴 문장 입력할 때-->
+    <script>
+        const textarea = document.querySelector('textarea')
+        const h1 = document.querySelector('h1')
+        
+        /*textarea.addEventListener('keyup', function(){
+            //글자 작성 하다 손 떼면 이벤트 발생. 
+            const value = textarea.value;
+            console.log(value);
+            console.log(value.length);
+            h1.textContent= `글자 수 : ${value.length}`;
+
+        });
+
+        */
+
+        textarea.addEventListener('keyup', (event) => {
+          const length = textarea.value.length
+          h1.textContent = `글자 수: ${length}`
+        });
+      
+
+    </script>
+</body>
+</html>

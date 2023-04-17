@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_selec1_7.html</title>
+</head>
+<body>
+   <ul id = "wrap">
+    <li>리스트1
+        <ul>
+            <li id = list_1>리스트 1-1</li>
+            <li>리스트1-2</li>
+        </ul>
+    </li>
+    <li>리스트2</li>
+    <li>리스트3</li>
+   </ul> 
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+    $(function()){
+        // $('list_1').parent().css('color','red');
+        $('#wrap').children().css('color','red');
+    }
+</script>
+</html>

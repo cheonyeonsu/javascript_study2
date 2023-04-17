@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i = 0;
+        const array = [1, 2, 3, 4, 5];
+        
+        while(i < 100) { 
+            console.log(`${i}번째 실행`);
+            i++;
+
+            if (i == 10) { break;} //브레이크 걸어서 무한으로 못가게 
+        }
+        
+        /*do { //무조건 실행하고 본다. 
+            console.log(`${i}번째 실행`)
+            i++; //i가 하나 증가
+        } while(i < 10) //참이면 다시 do로 돌아감 > 10보다 커지기 직전까지.*/
+       
+    </script>
+</body>
+</html>

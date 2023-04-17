@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 버튼 누르면 내용색이 빨간색으로 변하는 이벤트 -->
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button class="btn1">버튼1</button>
+        </p>
+        <p class="con1">내용1</p>
+        <p>
+            <button class="btn2">버튼2</button>
+        </p>
+        <p class="con2">내용2</p>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <script>
+        $(function(){ //클릭부분만 바꿔주면 됨!
+            $(".btn1").click(function(){
+                $('.con1').css({color:"red"});
+            })
+            
+            //이벤트를 동시에 2개 이상 적용하고 싶을 때.
+            //제이슨 객체는 뭐든 다 넣을 수 있음. 
+            $(".btn2").on({
+		"mouseover focus": function() {
+			$(".btn2").parent().next()
+			.css({"color":"blue"});
+		},
+
+		"mouseout blur": function() {
+			$(".btn2").parent().next()
+			.css({"color":"black"});
+		},
+            })
+
+            $(".btn1").off("click"); //이벤트 제거됨
+            $(".btn2").off("mouseover focus");
+        })
+    </script>
+</body>
+</html>
